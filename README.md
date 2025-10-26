@@ -8,14 +8,6 @@ Predictive analytics solution to identify and reduce product return rates using 
 - **Python Codebase**: Machine learning models for return prediction  
 - **High-Risk Products CSV**: Identified products with return probability scores
 
-## 🚀 Quick Start
-
-```bash
-pip install -r requirements.txt
-python return_prediction_model.py
-
-Open ecommerce_returns_dashboard.pbix in Power BI to explore the interactive visualizations.
-
 ## 📊 **Results**
 - 127 high-risk products identified (>70% return probability)
 - 85% model accuracy in predicting returns
