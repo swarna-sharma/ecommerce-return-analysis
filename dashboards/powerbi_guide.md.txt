@@ -1,0 +1,66 @@
+# Power BI Dashboard Guide
+
+## Dashboard Overview
+Interactive e-commerce return analysis dashboard with predictive risk scoring and drill-through capabilities.
+
+## Files Included
+- `ecommerce_returns_dashboard.pbix` - Complete Power BI dashboard
+
+## Dashboard Structure
+
+### 📊 Sheet 1: Executive Summary
+**Purpose:** High-level overview of return performance
+
+**Visualizations:**
+- **KPI Cards**: Overall return rate, total orders, revenue impact
+- **Return Rate by Category**: Bar chart showing worst-performing categories
+- **Monthly Trends**: Line chart showing return patterns over time
+- **Category Filter**: Slicer to filter all visuals by product category
+
+### 🔍 Sheet 2: Detailed Analysis  
+**Purpose:** Deep dive into return patterns and drivers
+
+**Visualizations:**
+- **Return Drivers**: Analysis of factors influencing returns
+- **Customer Segments**: Return behavior by customer groups
+- **Product Attributes**: Size/version-specific return patterns
+- **Date Range Filter**: Time-based analysis controls
+
+### ⚠️ Sheet 3: Risk Management
+**Purpose:** Identify and monitor high-risk products
+
+**Visualizations:**
+- **High-Risk Products Table**: Products with >70% return probability
+- **Risk Distribution**: Donut chart showing risk category breakdown
+- **Risk vs Revenue**: Scatter plot comparing return probability and revenue impact
+- **Risk Level Filter**: Filter by Low/Medium/High risk categories
+
+## Interactive Features
+
+### 🔄 Cross-Filtering
+- Select any category → All visuals update automatically
+- Click on time period → See corresponding return patterns
+- Choose risk level → Filter high-risk products table
+
+### 🎯 Drill-Through Capabilities
+1. **Right-click any category bar** → "Drill Through" to see product details
+2. **Right-click any data point** → "See Data" for underlying transactions
+3. **Use tooltips** for additional context on hover
+
+### 🎚️ Filters Panel
+- **Category**: Multi-select product categories
+- **Date Range**: Custom time period selection  
+- **Risk Level**: Filter by predicted return probability
+- **Return Status**: Focus on returns only or include all orders
+
+## Data Model
+
+### Relationships
+- return_analysis_dataset[Category] → Many-to-One → dashboard_category_summary[Category]
+- return_analysis_dataset[Date] → Many-to-One → dashboard_monthly_trends[Date]
+- high_risk_products[Category] → Many-to-One → dashboard_category_summary[Category]
+
+### Key Measures
+- **Return Rate %**: Overall return percentage
+- **Monthly Return Rate**: Time-based return calculation
+- **Revenue at Risk**: Potential loss from high-risk products
