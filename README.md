@@ -23,4 +23,4 @@ Predictive analytics solution to identify and reduce product return rates using 
 ## 📈 **Insights**
 Product Category P shows the highest return rate (38%) with seasonal peaks during Q4. Price reductions correlate with 22% lower return probability. The solution enables proactive return management through predictive analytics.
 
-Complete analysis and methodology: project_report.pdf
+Complete analysis and methodology: outputs/ecommerce_project_report.pdf
